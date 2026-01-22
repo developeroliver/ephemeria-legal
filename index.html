@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy - Ephemeria</title>
+  <title>Privacy Policy - HabitDaily</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -28,85 +28,235 @@
       font-size: 0.9rem;
       color: #666;
     }
+    .highlight {
+      background-color: #f0f7ff;
+      padding: 1rem;
+      border-left: 4px solid #4a90e2;
+      margin: 1rem 0;
+    }
+    .example {
+      background-color: #f9f9f9;
+      padding: 0.8rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      margin: 0.5rem 0;
+    }
+    .no-collect {
+      color: #d32f2f;
+    }
+    .yes-collect {
+      color: #388e3c;
+    }
   </style>
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last Updated: June 24, 2025</p>
-  <p><em>How we protect your information</em></p>
+  <p class="updated">Last Updated: January 23, 2025</p>
 
   <div class="section">
     <h2>Introduction</h2>
-    <p>Welcome to Ephemeria. This Privacy Policy outlines how we collect, use, and protect your information while using our app. We are committed to safeguarding your data and ensuring transparency about how your information is handled.</p>
+    <p>Welcome to <strong>HabitDaily</strong>. This Privacy Policy outlines how we collect, use, and protect your information while using our app. We are committed to safeguarding your data and ensuring transparency about how your information is handled.</p>
   </div>
 
   <div class="section">
-    <h2>Authentication via Firebase</h2>
-    <p>Ephemeria uses Firebase Authentication via Apple Sign in to allow users to securely sign in and access personalized features.</p>
-    <p><strong>What We Collect via Firebase:</strong></p>
+    <h2>Data Storage & Sync via iCloud</h2>
+    <p>HabitDaily uses <strong>Apple's iCloud</strong> and <strong>SwiftData</strong> to store and sync your habit tracking data across your devices.</p>
+    
+    <p><strong>What We Store:</strong></p>
     <ul>
-      <li>Email address</li>
+      <li><strong>Habit data:</strong> Habit names, icons, colors, categories, frequencies, notes</li>
+      <li><strong>Check-in data:</strong> Completion dates, skip reasons, status (completed/skipped/missed)</li>
+      <li><strong>Reminders:</strong> Notification preferences, custom messages, notification times</li>
+      <li><strong>App settings:</strong> Theme preferences, color palettes, onboarding status</li>
     </ul>
-    <p>This data is used solely for app functionality, such as:</p>
+
+    <p><strong>How It's Stored:</strong></p>
     <ul>
-      <li>Allowing you to log in securely</li>
-      <li>Storing and syncing your content across devices</li>
-      <li>Enabling sharing features and user-linked content uploads</li>
+      <li>All data is stored <strong>locally on your device</strong> using SwiftData</li>
+      <li>Data is automatically synced to <strong>your personal iCloud account</strong> if you have iCloud enabled</li>
+      <li><strong>We do not have access to your iCloud data</strong> - it's encrypted and stored in your Apple account</li>
+      <li>You maintain full control over your data through your iCloud settings</li>
     </ul>
-    <p>We do not use your name or email for advertising purposes, and this data is never shared with third parties for marketing.</p>
-  </div>
 
-  <div class="section">
-    <h2>Subscription & Purchase Management via RevenueCat</h2>
-    <p>Ephemeria uses RevenueCat to provide subscriptions, ensuring a seamless and secure experience.</p>
-    <p><strong>What RevenueCat Collects on Our Behalf:</strong></p>
+    <div class="highlight">
+      <strong>🔒 Privacy Note:</strong> Your habit data never leaves Apple's ecosystem. We cannot see, access, or retrieve your personal habit information.
+    </div>
+
+    <p><strong>Data Deletion:</strong></p>
     <ul>
-      <li>A randomly generated anonymous user ID</li>
-      <li>Transaction details (e.g., purchase date, product ID, subscription status, renewal info)</li>
-    </ul>
-    <p>This data is used to:</p>
-    <ul>
-      <li>Enable and manage premium features</li>
-      <li>Prevent fraud through receipt validation</li>
-      <li>Generate aggregated analytics to help us improve the app</li>
-    </ul>
-    <p>Importantly, RevenueCat does not receive your Firebase username or email. The RevenueCat user ID is anonymous and not linked to your personal identity.</p>
-  </div>
-
-  <div class="section">
-    <h2>How We Use Your Data</h2>
-    <p><strong>Firebase:</strong> For authentication.</p>
-    <p><strong>RevenueCat:</strong> For managing subscriptions, enabling entitlements, validating purchases, and analyzing aggregated subscription behavior.</p>
-  </div>
-
-  <div class="section">
-    <h2>Store Your Data</h2>
-    <p><strong>SwiftData:</strong> All your data will be stored locally on your device. You can delete all data when you delete your account.</p>
-  </div>
-
-  <div class="section">
-    <h2>Your Choices</h2>
-    <ul>
-      <li>You can use Ephemeria’s core features without a subscription.</li>
-      <li>Your email is stored only if you choose to sign in.</li>
-      <li>Subscription data is handled anonymously through RevenueCat.</li>
+      <li>You can delete all your data by deleting the app</li>
+      <li>To remove data from iCloud: Go to Settings → [Your Name] → iCloud → Manage Storage → HabitDaily → Delete Documents & Data</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>Data Retention</h2>
-    <p>We retain authentication and purchase data as long as it's needed to provide app functionality or meet legal obligations. Since RevenueCat uses anonymous identifiers, we cannot delete individual purchase records. Firebase-stored identity data (e.g., email/username) can be deleted upon request.</p>
+    <h2>Subscription & Purchase Management via StoreKit</h2>
+    <p>HabitDaily uses <strong>Apple's StoreKit 2</strong> to provide premium subscriptions, ensuring a secure and privacy-focused experience.</p>
+    
+    <p><strong>What Apple Collects:</strong></p>
+    <ul>
+      <li>Purchase transaction details (handled entirely by Apple)</li>
+      <li>Subscription status and renewal information</li>
+      <li>All payment information is processed by Apple - we never see your credit card details</li>
+    </ul>
+
+    <p><strong>What We Store Locally:</strong></p>
+    <ul>
+      <li><strong>Premium status:</strong> A simple boolean flag (isPremium: true/false)</li>
+      <li><strong>Purchase date:</strong> The date you became a premium member</li>
+      <li><strong>No personal identifiers:</strong> We don't collect or store any personal information related to purchases</li>
+    </ul>
+
+    <p><strong>How Subscriptions Work:</strong></p>
+    <ul>
+      <li>All subscription management happens through Apple's App Store</li>
+      <li>Purchases are validated directly with Apple's servers</li>
+      <li>We use StoreKit 2's built-in security features to verify subscriptions</li>
+      <li><strong>No third-party payment processors</strong> are used</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Analytics & Crash Reporting via Firebase</h2>
+    <p>HabitDaily uses <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong> to improve app quality and user experience.</p>
+
+    <p><strong>What Firebase Collects:</strong></p>
+    <ul>
+      <li><strong>Anonymous analytics events:</strong> App usage patterns, feature interactions, screen views</li>
+      <li><strong>Crash reports:</strong> Technical error logs to help us fix bugs</li>
+      <li><strong>Device information:</strong> Device model, OS version, app version (all anonymized)</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>🛡️ Important Privacy Protections:</strong>
+      <ul>
+        <li><strong>Debug mode:</strong> Analytics and Crashlytics are <strong>completely disabled</strong> during development/testing</li>
+        <li><strong>Production mode:</strong> Only anonymized, aggregated data is collected</li>
+        <li><strong>No personal information:</strong> We never send names, emails, or personally identifiable data to Firebase</li>
+        <li><strong>Opt-out:</strong> You can disable analytics by turning off "Share Analytics" in your iOS device settings</li>
+      </ul>
+    </div>
+
+    <p><strong>What We Track (Examples):</strong></p>
+    <div class="example">
+      <span class="yes-collect">✅ Anonymous events:</span><br>
+      - "habit_created" (category: "health", frequency: "daily")<br>
+      - "premium_purchase_completed" (product_id: "monthly")<br>
+      - "screen_viewed" (screen: "analytics")<br><br>
+
+      <span class="no-collect">❌ We NEVER track:</span><br>
+      - Your name or email<br>
+      - Your specific habit names or personal notes<br>
+      - Individual check-in data<br>
+      - Location data
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Notifications</h2>
+    <p>HabitDaily can send you local notifications to remind you about your habits.</p>
+
+    <p><strong>What We Use:</strong></p>
+    <ul>
+      <li><strong>Apple's UserNotifications framework</strong> for local notifications</li>
+      <li>Notifications are generated <strong>locally on your device</strong></li>
+      <li><strong>No remote notifications</strong> or push notification services</li>
+    </ul>
+
+    <p><strong>What's Included:</strong></p>
+    <ul>
+      <li>Notification time and frequency (stored locally)</li>
+      <li>Custom reminder messages (Premium feature, stored locally)</li>
+      <li>All notification data stays on your device</li>
+    </ul>
+
+    <p><strong>Your Control:</strong></p>
+    <ul>
+      <li>You can enable/disable notifications in the app settings</li>
+      <li><strong>Free users:</strong> One daily reminder at 6:00 PM</li>
+      <li><strong>Premium users:</strong> Custom reminders per habit with personalized times and messages</li>
+      <li>Manage notification permissions in iOS Settings → HabitDaily → Notifications</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>What We DO NOT Collect</h2>
+    <p>HabitDaily is designed with <strong>privacy-first</strong> principles:</p>
+    <div class="example">
+      <span class="no-collect">❌ No email or username</span> - No authentication required<br>
+      <span class="no-collect">❌ No location tracking</span> - We don't access your location<br>
+      <span class="no-collect">❌ No camera or microphone access</span><br>
+      <span class="no-collect">❌ No contact list access</span><br>
+      <span class="no-collect">❌ No advertising identifiers</span><br>
+      <span class="no-collect">❌ No data sold to third parties</span> - Ever<br>
+      <span class="no-collect">❌ No user profiling or behavioral targeting</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Third-Party Services</h2>
+    <p><strong>Services We Use:</strong></p>
+    <ol>
+      <li><strong>Apple iCloud</strong> - For data sync (optional, controlled by you)</li>
+      <li><strong>Apple StoreKit</strong> - For in-app purchases (required by iOS)</li>
+      <li><strong>Firebase (Google)</strong> - For crash reporting and anonymous analytics</li>
+    </ol>
+
+    <p><strong>What We DON'T Use:</strong></p>
+    <ul>
+      <li>❌ No Facebook SDK</li>
+      <li>❌ No Google Ads</li>
+      <li>❌ No data brokers</li>
+      <li>❌ No cross-app tracking</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Children's Privacy</h2>
+    <p>HabitDaily does not knowingly collect data from children under 13. The app is designed for general audiences and does not require age verification. If you believe a child has provided us with data, please contact us.</p>
+  </div>
+
+  <div class="section">
+    <h2>Data Security</h2>
+    <ul>
+      <li>All data is encrypted on your device and in iCloud</li>
+      <li>We use Apple's security frameworks (SwiftData, CloudKit)</li>
+      <li>No data is transmitted to our servers</li>
+      <li>Premium status is validated locally through StoreKit</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Your Rights & Choices</h2>
+    <p>You have full control over your data:</p>
+    <ul>
+      <li><strong>Access:</strong> View all your data directly in the app</li>
+      <li><strong>Export:</strong> Export your habit data as CSV (Settings → Export Data)</li>
+      <li><strong>Delete:</strong> Delete all data by removing the app or using "Delete All Data" in settings</li>
+      <li><strong>Opt-out of Analytics:</strong> Disable in iOS Settings → Privacy & Security → Analytics & Improvements</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>International Users</h2>
+    <p>HabitDaily stores data in your iCloud account, which follows Apple's global data storage policies. Firebase data is processed according to Google's global infrastructure.</p>
   </div>
 
   <div class="section">
     <h2>Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy periodically. Any changes will be reflected here, and the "Last Updated" date will be revised accordingly.</p>
+    <p>We may update this Privacy Policy periodically. Any changes will be reflected here, and the "Last Updated" date will be revised accordingly. Significant changes will be communicated through the app.</p>
   </div>
 
   <div class="section">
     <h2>Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at:<br><a href="mailto:olivier.codes@gmail.com">olivier.codes@gmail.com</a></p>
-    <p>By using Ephemeria, you agree to the collection and use of information as described above.</p>
+    <p>If you have any questions about this Privacy Policy, please contact us at:<br>
+    <strong>Email:</strong> <a href="mailto:olivier.codes@gmail.com">olivier.codes@gmail.com</a></p>
+  </div>
+
+  <div class="section">
+    <h2>Your Agreement</h2>
+    <p>By using HabitDaily, you agree to the collection and use of information as described above.</p>
   </div>
 </body>
 </html>
